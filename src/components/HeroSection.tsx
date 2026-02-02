@@ -68,21 +68,23 @@ export default function HeroSection() {
               className="w-full bg-transparent text-fill-color px-4 py-3 focus:outline-none placeholder-gray-500"
             />
 
-            <button className="hidden sm:block bg-blue-500 text-white font-bold px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">
+            <button className="bg-blue-500 text-white font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-blue-600 transition-colors">
               Explore
             </button>
           </div>
         </div>
 
         {/* Social Proof */}
-        <div className="pt-10 flex items-center justify-center gap-6 text-gray-500">
-          <span className="text-sm font-semibold uppercase tracking-widest mr-4">
+        <div className="pt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-500">
+          <span className="text-sm font-semibold uppercase tracking-widest mr-0 sm:mr-4">
             Trusted Networks only
           </span>
-          <BsDiscord className="text-3xl hover:text-[#5865F2] transition-colors" />
-          <FaTelegram className="text-3xl hover:text-[#24A1DE] transition-colors" />
-          <FaFacebook className="text-3xl hover:text-[#1877F2] transition-colors" />
-          <FaReddit className="text-3xl hover:text-[#FF4500] transition-colors" />
+          <div className="flex gap-6">
+            <BsDiscord className="text-2xl sm:text-3xl hover:text-[#5865F2] transition-colors" />
+            <FaTelegram className="text-2xl sm:text-3xl hover:text-[#24A1DE] transition-colors" />
+            <FaFacebook className="text-2xl sm:text-3xl hover:text-[#1877F2] transition-colors" />
+            <FaReddit className="text-2xl sm:text-3xl hover:text-[#FF4500] transition-colors" />
+          </div>
         </div>
       </div>
     </section>
