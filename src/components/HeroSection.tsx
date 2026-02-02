@@ -25,7 +25,7 @@ export default function HeroSection() {
       </div>
 
       {/* BADGE */}
-      <div className="absolute top-30 left-1/2 -translate-x-1/2 z-20">
+      <div className="absolute mb-2 relative z-10 text-center max-w-5xl mx-auto space-y-10">
         <div className="relative inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold tracking-widest uppercase animate-fade-in">
           <span className="absolute inline-flex h-2.5 w-2.5 rounded-full bg-blue-400 opacity-75 animate-ping" />
           <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-blue-500" />
