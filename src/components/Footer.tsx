@@ -19,7 +19,7 @@ export default function Footer() {
                 <div className="mt-4 flex flex-col md:flex-row justify-between items-center text-sm text-fill-color/60 border-t border-white/5 pt-8">
 
                     <p className="order-2 md:order-1 mt-8 md:mt-0 text-center md:text-left">
-                        &copy; Nww Airdrop, 2026.
+                        &copy; Nww Community, 2026.
                     </p>
 
                     <div className="order-1 md:order-2 flex space-x-6 mt-4 md:mt-0">

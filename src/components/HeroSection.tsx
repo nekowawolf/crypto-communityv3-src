@@ -68,7 +68,7 @@ export default function HeroSection() {
               className="w-full bg-transparent text-fill-color px-4 py-3 focus:outline-none placeholder-gray-500"
             />
 
-            <button className="bg-blue-500 text-white font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-blue-600 transition-colors">
+            <button className="bg-blue-500 text-white font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-blue-600 transition-colors cursor-pointer">
               Explore
             </button>
           </div>
@@ -80,10 +80,10 @@ export default function HeroSection() {
             Trusted Networks only
           </span>
           <div className="flex gap-3">
-            <BsDiscord className="text-lg sm:text-xl hover:text-[#5865F2] transition-colors" />
-            <FaTelegram className="text-lg sm:text-xl hover:text-[#24A1DE] transition-colors" />
-            <FaFacebook className="text-lg sm:text-xl hover:text-[#1877F2] transition-colors" />
-            <FaReddit className="text-lg sm:text-xl hover:text-[#FF4500] transition-colors" />
+            <BsDiscord className="text-lg sm:text-xl hover:text-[#5865F2] transition-colors cursor-pointer" />
+            <FaTelegram className="text-lg sm:text-xl hover:text-[#24A1DE] transition-colors cursor-pointer" />
+            <FaFacebook className="text-lg sm:text-xl hover:text-[#1877F2] transition-colors cursor-pointer" />
+            <FaReddit className="text-lg sm:text-xl hover:text-[#FF4500] transition-colors cursor-pointer" />
           </div>
         </div>
       </div>
