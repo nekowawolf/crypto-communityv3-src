@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#050505] text-white overflow-x-hidden selection:bg-blue-500/30">
+    <div className="min-h-screen body-color text-white overflow-x-hidden selection:bg-blue-500/30">
       <Header />
 
       <main>

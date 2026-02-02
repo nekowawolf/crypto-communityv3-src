@@ -28,26 +28,26 @@ export default function HeroSection() {
                 </div>
 
                 {/* Main Headline */}
-                <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter text-white leading-[0.9]">
+                <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter text-fill-color leading-[0.9]">
                     Connect with the <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
                         Crypto Elite
                     </span>
                 </h1>
 
-                <p className="text-lg sm:text-2xl text-gray-400 max-w-2xl mx-auto font-light">
-                    Your central hub for exclusive <span className="text-white font-medium">Trading Groups</span>, <span className="text-white font-medium">Dev Channels</span>, and <span className="text-white font-medium">Airdrop Hunters</span>.
+                <p className="text-lg sm:text-2xl text-fill-color/60 max-w-2xl mx-auto font-light">
+                    Your central hub for exclusive <span className="text-fill-color font-medium">Trading Groups</span>, <span className="text-fill-color font-medium">Dev Channels</span>, and <span className="text-fill-color font-medium">Airdrop Hunters</span>.
                 </p>
 
                 {/* Search Mockup */}
                 <div className="max-w-xl mx-auto mt-10 relative group">
                     <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
-                    <div className="relative flex items-center bg-[#0a0a0a] rounded-xl border border-white/10 p-2 shadow-2xl">
+                    <div className="relative flex items-center card-color2 rounded-xl border border-color p-2 shadow-2xl">
                         <FaMagnifyingGlass className="text-gray-500 ml-4 text-xl" />
                         <input
                             type="text"
                             placeholder="Find communities (e.g. 'Solana Devs', 'NFT Alpha')..."
-                            className="w-full bg-transparent text-white px-4 py-3 focus:outline-none placeholder-gray-600 h-full"
+                            className="w-full bg-transparent text-fill-color px-4 py-3 focus:outline-none placeholder-gray-500 h-full"
                         />
                         <button className="hidden sm:block bg-white text-black font-bold px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors">
                             Explore
@@ -56,7 +56,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Social Proof Icons */}
-                <div className="pt-12 flex items-center justify-center gap-6 text-gray-600">
+                <div className="pt-12 flex items-center justify-center gap-6 text-gray-500">
                     <span className="text-sm font-semibold uppercase tracking-widest mr-4">Trusted Networks only</span>
                     <BsDiscord className="text-3xl hover:text-[#5865F2] transition-colors" />
                     <FaTelegram className="text-3xl hover:text-[#24A1DE] transition-colors" />

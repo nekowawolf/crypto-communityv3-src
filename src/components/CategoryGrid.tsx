@@ -52,10 +52,10 @@ export default function CategoryGrid() {
         <section id="categories" className="py-20 px-6 max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                 <div>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-fill-color mb-2">
                         Browse by Category
                     </h2>
-                    <p className="text-gray-400">
+                    <p className="text-fill-color/60">
                         Find the specific niche that fits your interests.
                     </p>
                 </div>
@@ -69,7 +69,7 @@ export default function CategoryGrid() {
                     <a
                         key={idx}
                         href="#"
-                        className="group relative p-6 rounded-2xl bg-[#0f0f11] border border-white/5 hover:border-white/10 transition-all hover:-translate-y-1 overflow-hidden"
+                        className="group relative p-6 rounded-2xl card-color2 border border-color hover:border-color transition-all hover:-translate-y-1 overflow-hidden"
                     >
                         {/* Hover Gradient */}
                         <div className={`absolute inset-0 bg-gradient-to-br ${cat.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
@@ -78,10 +78,10 @@ export default function CategoryGrid() {
                             <div className={`text-3xl ${cat.text} mb-2 group-hover:scale-110 transition-transform`}>
                                 {cat.icon}
                             </div>
-                            <h3 className="font-bold text-gray-200 text-sm sm:text-base">
+                            <h3 className="font-bold text-fill-color text-sm sm:text-base">
                                 {cat.name}
                             </h3>
-                            <span className="text-xs text-gray-500 bg-black/20 px-2 py-1 rounded-full">
+                            <span className="text-xs text-fill-color/60 bg-black/20 px-2 py-1 rounded-full">
                                 {cat.count} Groups
                             </span>
                         </div>
