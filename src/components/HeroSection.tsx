@@ -75,15 +75,15 @@ export default function HeroSection() {
         </div>
 
         {/* Social Proof */}
-        <div className="pt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-500">
-          <span className="text-sm font-semibold uppercase tracking-widest mr-0 sm:mr-4">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-3 text-gray-500">
+          <span className="text-xs font-semibold uppercase tracking-widest mr-0 sm:mr-3">
             Trusted Networks only
           </span>
-          <div className="flex gap-6">
-            <BsDiscord className="text-2xl sm:text-3xl hover:text-[#5865F2] transition-colors" />
-            <FaTelegram className="text-2xl sm:text-3xl hover:text-[#24A1DE] transition-colors" />
-            <FaFacebook className="text-2xl sm:text-3xl hover:text-[#1877F2] transition-colors" />
-            <FaReddit className="text-2xl sm:text-3xl hover:text-[#FF4500] transition-colors" />
+          <div className="flex gap-3">
+            <BsDiscord className="text-lg sm:text-xl hover:text-[#5865F2] transition-colors" />
+            <FaTelegram className="text-lg sm:text-xl hover:text-[#24A1DE] transition-colors" />
+            <FaFacebook className="text-lg sm:text-xl hover:text-[#1877F2] transition-colors" />
+            <FaReddit className="text-lg sm:text-xl hover:text-[#FF4500] transition-colors" />
           </div>
         </div>
       </div>
