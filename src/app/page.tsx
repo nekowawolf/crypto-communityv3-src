@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 export const metadata = {
-  title: "Nww | The Crypto Community Directory",
+  title: "Nww",
   description:
     "The ultimate hub for crypto communities. Find trading groups, dev channels, airdrop hunters, and more.",
 };
