@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import CategoryGrid from "@/components/CategoryGrid";
 import { GlobeDemo } from "@/components/GlobeSection";
 import WhyUs from "@/components/WhyUs";
+import PlatformSection from "@/components/PlatformSection";
 import LogoMarquee from "@/components/LogoMarquee";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -22,6 +23,7 @@ export default function HomePage() {
         <HeroSection />
         <LogoMarquee />
         <GlobeDemo />
+        <PlatformSection />
         <CategoryGrid />
         <WhyUs />
         <CTASection />
