@@ -69,7 +69,7 @@ export default function HeroSection() {
             />
 
             <button className="bg-blue-500 text-white font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-blue-600 transition-colors cursor-pointer">
-              Explore
+              Search
             </button>
           </div>
         </div>
