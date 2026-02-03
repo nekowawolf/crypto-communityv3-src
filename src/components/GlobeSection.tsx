@@ -2,7 +2,6 @@
 
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
-import { FaGlobe, FaNetworkWired } from "react-icons/fa6";
 
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
   ssr: false,
@@ -408,34 +407,12 @@ export function GlobeDemo() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-fill-color leading-tight">
               Global Network <br />
-              <span className="text-blue-500">Without Borders.</span>
+              <span className="text-blue-400">Without Borders.</span>
             </h2>
             <p className="text-fill-color/60 text-base sm:text-lg leading-relaxed mt-4">
               Connect with a worldwide community of crypto enthusiasts, traders, and builders. Our platform bridges the gap between opportunities and talent across every continent.
             </p>
           </motion.div>
-
-          <div className="space-y-4 sm:space-y-6 pt-2 sm:pt-4">
-            <div className="flex gap-3 sm:gap-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl sm:text-2xl shrink-0">
-                <FaGlobe />
-              </div>
-              <div>
-                <h4 className="text-fill-color font-bold text-base sm:text-lg">Worldwide Access</h4>
-                <p className="text-fill-color/60 text-xs sm:text-sm">Join groups from over 100+ countries instantly.</p>
-              </div>
-            </div>
-
-            <div className="flex gap-3 sm:gap-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl sm:text-2xl shrink-0">
-                <FaNetworkWired />
-              </div>
-              <div>
-                <h4 className="text-fill-color font-bold text-base sm:text-lg">Decentralized Hub</h4>
-                <p className="text-fill-color/60 text-xs sm:text-sm">A truly peer-to-peer network for community growth.</p>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Right Column: Globe */}

@@ -12,7 +12,7 @@ export default function WhyUs() {
                 <div className="space-y-6 sm:space-y-8">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-fill-color leading-tight">
                         Curated Quality. <br />
-                        <span className="text-blue-500">Zero Scam Links.</span>
+                        <span className="text-blue-400">Zero Scam Links.</span>
                     </h2>
 
                     <p className="text-fill-color/60 text-base sm:text-lg leading-relaxed">
