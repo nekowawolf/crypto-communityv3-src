@@ -25,11 +25,13 @@ const platforms: PlatformItem[] = [
 
     { type: 'icon', name: 'Telegram', icon: FaTelegram, color: 'text-[#24A1DE]' },
     { type: 'empty' },
+    { type: 'empty' },  
 
     { type: 'icon', name: 'Reddit', icon: FaReddit, color: 'text-[#FF4500]' },
     { type: 'empty' },
 
     { type: 'icon', name: 'Facebook', icon: FaFacebook, color: 'text-[#1877F2]' },
+    { type: 'empty' },
     { type: 'empty' },
 ];
 
@@ -63,9 +65,13 @@ export default function PlatformMarquee() {
                                         <div className="w-full h-full rounded-2xl card-color2 flex flex-col items-center justify-center relative overflow-hidden">
                                             
                                             <item.icon
-                                                className={`text-6xl transition-all duration-500 
-                                                text-gray-500/30 grayscale 
-                                                group-hover:grayscale-0 group-hover:scale-110 group-hover:-translate-y-2
+                                                className={`text-6xl transition-all duration-500
+                                                            dark:text-fill-color
+                                                            grayscale
+                                                            group-hover:grayscale-0
+                                                            group-hover:scale-110
+                                                            group-hover:-translate-y-2
+                                                            group-hover:text-fill-color
                                                 ${item.color}`}
                                             />
 
