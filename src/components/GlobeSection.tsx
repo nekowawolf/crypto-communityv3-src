@@ -406,11 +406,13 @@ export function GlobeDemo() {
         <div className="space-y-6 sm:space-y-8 order-1 md:order-1">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-fill-color leading-tight">
-              Global Network <br />
-              <span className="text-blue-400">Without Borders.</span>
+              A Global Crypto Community <br />
+              <span className="text-blue-400">Without Limits</span>
             </h2>
+
             <p className="text-fill-color/60 text-base sm:text-lg leading-relaxed mt-4">
-              Connect with a worldwide community of crypto enthusiasts, traders, and builders. Our platform bridges the gap between opportunities and talent across every continent.
+              Join crypto enthusiasts, traders, and builders from every corner of the world.
+              We connect people, ideas, and opportunities.
             </p>
           </motion.div>
         </div>

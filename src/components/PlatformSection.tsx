@@ -39,10 +39,10 @@ export default function PlatformMarquee() {
             
             {/* Header */}
             <div className="max-w-7xl mx-auto px-6 text-center mb-16 relative z-10">
-                <h2 className="text-3xl sm:text-5xl font-extrabold text-fill-color mb-6">
-                    The Social <span className="text-blue-500">Ecosystem</span>
+                <h2 className="text-3xl sm:text-5xl font-extrabold text-fill-color mb-4">
+                    The Social <span className="text-blue-400">Ecosystem</span>
                 </h2>
-                <p className="text-lg text-fill-color/60 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-base sm:text-lg text-fill-color/60 max-w-2xl mx-auto leading-relaxed">
                     Our directory is powered by the giants of the internet. We manually verify and index the most influential crypto communities from these leading platforms.
                 </p>
             </div>

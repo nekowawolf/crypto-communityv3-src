@@ -30,7 +30,7 @@ export default function CategoryGrid() {
     return (
         <section id="categories" className="py-20 px-6 max-w-7xl mx-auto">
             <div className="text-center mb-12">
-                <h2 className="text-2xl sm:text-5xl font-bold text-fill-color mb-4">
+                <h2 className="text-3xl sm:text-5xl font-extrabold text-fill-color mb-4">
                     Explore Communities
                 </h2>
                 <p className="text-base sm:text-lg text-fill-color/60 max-w-2xl mx-auto">
