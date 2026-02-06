@@ -405,7 +405,7 @@ export function GlobeDemo() {
         {/* Left Column: Text Content */}
         <div className="space-y-6 sm:space-y-8 order-1 md:order-1">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-fill-color leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-fill-color leading-tight">
               A Global Crypto Community <br />
               <span className="text-blue-400">Without Limits</span>
             </h2>

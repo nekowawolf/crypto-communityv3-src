@@ -12,12 +12,12 @@ export default function CTASection() {
           <div className="absolute -bottom-60 left-1/2 -translate-x-1/2 h-80 w-[120%] rounded-full bg-gradient-to-t from-blue-500 via-blue-400 to-transparent opacity-60 blur-3xl z-0" />
           
           <div className="relative z-30">
-            <h2 className="text-2xl sm:text-5xl font-bold text-fill-color mb-5">
-              Manage a Crypto Community?
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-fill-color mb-5">
+              Have a Crypto Community?
             </h2>
 
-            <p className="text-fill-color/70 text-base sm:text-xl max-w-2xl mx-auto mb-8 sm:mb-10">
-              Get listed on NWW Directory and reach thousands of daily users looking for their next home. It's free and takes less than 2 minutes.
+            <p className="text-fill-color/60 text-base sm:text-xl max-w-3xl mx-auto mb-8 sm:mb-10">
+              List it on the NWW Directory and reach thousands of users every day looking for active, reliable, and growing crypto communities. Free and fast to join.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">

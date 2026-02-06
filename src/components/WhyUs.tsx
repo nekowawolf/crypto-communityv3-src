@@ -10,7 +10,7 @@ export default function WhyUs() {
             <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
 
                 <div className="space-y-3 sm:space-y-5">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-fill-color leading-tight">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-fill-color leading-tight">
                         Curated Quality <br />
                         <span className="text-blue-400">Zero Scam Links</span>
                     </h2>
@@ -26,7 +26,7 @@ export default function WhyUs() {
                                 <FaShieldHalved />
                             </div>
                             <div>
-                                <h4 className="text-fill-color font-bold text-base sm:text-lg">Verified Safety</h4>
+                                <h4 className="text-fill-color font-extrabold text-base sm:text-lg">Verified Safety</h4>
                                 <p className="text-fill-color/60 text-xs sm:text-sm">Every Discord and Telegram link is checked for authenticity.</p>
                             </div>
                         </div>
@@ -36,7 +36,7 @@ export default function WhyUs() {
                                 <FaBolt />
                             </div>
                             <div>
-                                <h4 className="text-fill-color font-bold text-base sm:text-lg">Real-Time Updates</h4>
+                                <h4 className="text-fill-color font-extrabold text-base sm:text-lg">Real-Time Updates</h4>
                                 <p className="text-fill-color/60 text-xs sm:text-sm">Dead links are purged weekly. Always fresh.</p>
                             </div>
                         </div>
@@ -52,7 +52,7 @@ export default function WhyUs() {
                                 <div className="h-3 sm:h-4 w-28 sm:w-32 bg-gray-700 rounded animate-pulse" />
                                 <div className="h-2.5 sm:h-3 w-16 sm:w-20 bg-gray-800 rounded animate-pulse" />
                             </div>
-                            <div className="ml-auto px-2 sm:px-3 py-0.5 sm:py-1 bg-green-500/20 text-green-500 text-[10px] sm:text-xs font-bold rounded-full">
+                            <div className="ml-auto px-2 sm:px-3 py-0.5 sm:py-1 bg-green-500/20 text-green-500 text-[10px] sm:text-xs font-extrabold rounded-full">
                                 VERIFIED
                             </div>
                         </div>
