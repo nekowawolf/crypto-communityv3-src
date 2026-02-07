@@ -8,6 +8,7 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ExploreCommunity from "@/components/ExploreCommunity";
+import FAQSection from "@/components/FAQSection";
 
 export const metadata = {
   title: "Nww",
@@ -29,6 +30,7 @@ export default function HomePage() {
         <WhyUs />
         <CTASection />
         <ExploreCommunity />
+        <FAQSection />
       </main>
 
       <Footer />
