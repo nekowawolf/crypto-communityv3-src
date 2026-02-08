@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, Environment, Float } from '@react-three/drei';
+import {HighlightText} from './ui/HighlightText';
 import * as THREE from 'three';
 
 const faqs = [
@@ -107,8 +108,8 @@ export default function FAQSection() {
                     </Canvas>
                 </div>
 
-                <h2 className="mb-4 text-2xl font-extrabold text-fill-color sm:text-4xl xl:text-5xl">
-                    Frequently Asked Questions
+                <h2 className="mb-4 text-center text-2xl font-extrabold text-fill-color sm:text-4xl xl:text-5xl">
+                    Frequently Asked <HighlightText text="Questions" inView />
                 </h2>
 
                 <p className="mx-auto mb-16 max-w-[714px] font-medium text-fill-color/70">
@@ -129,7 +130,7 @@ export default function FAQSection() {
                                 onClick={() =>
                                     setOpenIndex(openIndex === index ? null : index)
                                 }
-                                className="w-full flex items-center justify-between p-4 sm:p-6 text-left"
+                                className="w-full flex items-center justify-between p-4 sm:p-6 text-left cursor-pointer"
                             >
                                 <span className="text-base sm:text-lg font-semibold text-fill-color pr-6">
                                     {faq.question}
