@@ -1,58 +1,40 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { TypeAnimation } from 'react-type-animation';
 import { FaTelegram, FaMagnifyingGlass, FaFacebook, FaReddit } from 'react-icons/fa6';
 import { BsDiscord } from 'react-icons/bs';
 
 const LANGUAGES = [
-  "Communities", 
-  "コミュニティ", 
-  "社区", 
-  "커뮤니티", 
-  "Komunitas", 
-  "Cộng đồng", 
-  "समुदाय", 
+  "Communities",
+  "コミュニティ",
+  "社区",
+  "커뮤니티",
+  "Komunitas",
+  "Cộng đồng",
+  "समुदाय",
 ];
 
 export default function HeroSection() {
-  const [displayedText1, setDisplayedText1] = useState('');
-  const [displayedText2, setDisplayedText2] = useState('');
-  const [activeTextSet, setActiveTextSet] = useState<1 | 2>(1);
+  const [firstLineDone, setFirstLineDone] = useState(false);
+  const [secondLineDone, setSecondLineDone] = useState(false);
   const [isTypewriterDone, setIsTypewriterDone] = useState(false);
   const [badgeText, setBadgeText] = useState(LANGUAGES[0]);
 
-  const text1 = "Discover Trusted ";
-  const text2 = "Crypto Communities";
+  const firstSequence = useMemo(() => [
+    "Discover Trusted ",
+    () => setFirstLineDone(true),
+  ], []);
 
-  {/* Typewriter Logic */}
+  const secondSequence = useMemo(() => [
+    "Crypto Communities",
+    () => setSecondLineDone(true),
+  ], []);
+
   useEffect(() => {
-    let currentText1 = '';
-    let currentText2 = '';
-    let index1 = 0;
-    let index2 = 0;
+    if (!isTypewriterDone) return;
 
-    const typeInterval = setInterval(() => {
-      if (index1 < text1.length) {
-        currentText1 += text1[index1];
-        setDisplayedText1(currentText1);
-        index1++;
-      } else if (index2 < text2.length) {
-        setActiveTextSet(2);
-        currentText2 += text2[index2];
-        setDisplayedText2(currentText2);
-        index2++;
-      } else {
-        clearInterval(typeInterval);
-        setIsTypewriterDone(true);
-      }
-    }, 50);
-
-    return () => clearInterval(typeInterval);
-  }, []);
-
-  {/* Language Scramble Logic */}
-  useEffect(() => {
     let interval: NodeJS.Timeout;
     let currentIndex = 0;
 
@@ -73,7 +55,11 @@ export default function HeroSection() {
           currentIndex = nextIndex;
         } else {
           const progress = scrambleIterations / maxIterations;
-          const length = Math.floor(currentText.length + (targetText.length - currentText.length) * progress);
+          const length = Math.floor(
+            currentText.length +
+            (targetText.length - currentText.length) * progress
+          );
+
           let scrambled = '';
           const chars = '!@#$%^&*()_+-=[]{}|;:,.<>?';
 
@@ -84,6 +70,7 @@ export default function HeroSection() {
               scrambled += chars[Math.floor(Math.random() * chars.length)];
             }
           }
+
           setBadgeText(scrambled);
         }
       }, 60);
@@ -91,10 +78,17 @@ export default function HeroSection() {
 
     interval = setInterval(cycleLanguage, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isTypewriterDone]);
+
+  useEffect(() => {
+    if (secondLineDone) {
+      setIsTypewriterDone(true);
+    }
+  }, [secondLineDone]);
 
   return (
     <section className="relative pt-40 pb-20 px-6 sm:px-10 overflow-hidden min-h-[85vh] flex flex-col items-center justify-center">
+
       {/* Background Grid */}
       <div className="absolute inset-0 z-0">
         <svg className="w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg">
@@ -132,36 +126,72 @@ export default function HeroSection() {
       </AnimatePresence>
 
       <div className="relative z-10 text-center max-w-5xl mx-auto space-y-10">
+
         {/* Main Headline */}
         <div className="relative inline-block">
-          {/* Background Glow */}
+
+          {/* Glow */}
           <div className="absolute inset-0 -z-10 flex items-center justify-center pointer-events-none">
             <div className="w-[650px] h-[420px] rounded-full bg-blue-500/20 blur-[130px] animate-pulse" />
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-fill-color leading-tight min-h-[120px] sm:min-h-[160px]">
-            {displayedText1}
-            {activeTextSet === 1 && !isTypewriterDone && (
-              <motion.span
-                animate={{ opacity: [1, 0] }}
-                transition={{ repeat: Infinity, duration: 0.8 }}
-                className="inline-block w-1 h-8 sm:h-10 lg:h-14 align-middle bg-gradient-to-b from-blue-400 to-blue-500 ml-1"
-              />
-            )}
-            <br />
-            <span className="text-blue-400">
-              {displayedText2}
-              {activeTextSet === 2 && !isTypewriterDone && (
-                <motion.span
-                  animate={{ opacity: [1, 0] }}
-                  transition={{ repeat: Infinity, duration: 0.8 }}
-                  className="inline-block w-1 h-8 sm:h-10 lg:h-14 align-middle bg-gradient-to-b from-blue-400 to-blue-500 ml-1"
+
+            {!firstLineDone && (
+              <>
+                <TypeAnimation
+                  sequence={firstSequence}
+                  speed={50}
+                  cursor={false}
+                  wrapper="span"
+                  className="inline-block"
                 />
-              )}
-            </span>
+                <motion.span
+                  animate={{ opacity: [1, 0, 1] }}
+                  transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
+                  className="inline-block w-[3px] sm:w-[4px] h-[0.85em] bg-gradient-to-b from-blue-300 to-blue-400 ml-1 sm:ml-2 align-baseline"
+                />
+              </>
+            )}
+
+            {/* Title */}
+
+            {firstLineDone && "Discover Trusted "}
+
+            <br />
+
+            {!firstLineDone && (
+              <span className="text-blue-400 opacity-0 pointer-events-none select-none inline-block">
+                Crypto Communities
+              </span>
+            )}
+
+            {firstLineDone && !secondLineDone && (
+              <span className="text-blue-400">
+                <TypeAnimation
+                  sequence={secondSequence}
+                  speed={50}
+                  cursor={false}
+                  wrapper="span"
+                  className="inline-block"
+                />
+                <motion.span
+                  animate={{ opacity: [1, 0, 1] }}
+                  transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
+                  className="inline-block w-[3px] sm:w-[4px] h-[0.85em] bg-gradient-to-b from-blue-300 to-blue-400 ml-1 sm:ml-2 align-baseline"
+                />
+              </span>
+            )}
+
+            {secondLineDone && (
+              <span className="text-blue-400">
+                Crypto Communities
+              </span>
+            )}
+
           </h1>
 
-          {/* Sub-headline Text */}
+          {/* Sub-headline */}
           <AnimatePresence>
             {isTypewriterDone && (
               <motion.p
@@ -178,12 +208,12 @@ export default function HeroSection() {
               </motion.p>
             )}
             {!isTypewriterDone && (
-              <div className="mt-6 h-10 sm:h-14 opacity-0 pointer-events-none" aria-hidden="true" />
+              <div className="mt-6 h-10 sm:h-14 opacity-0 pointer-events-none" />
             )}
           </AnimatePresence>
         </div>
 
-        {/* Search Bar Section */}
+        {/* Search Bar */}
         <AnimatePresence>
           {isTypewriterDone && (
             <motion.div
@@ -210,7 +240,7 @@ export default function HeroSection() {
             </motion.div>
           )}
           {!isTypewriterDone && (
-            <div className="max-w-xl mx-auto mt-6 h-[70px] opacity-0" aria-hidden="true" />
+            <div className="max-w-xl mx-auto mt-6 h-[70px] opacity-0" />
           )}
         </AnimatePresence>
 
@@ -235,9 +265,10 @@ export default function HeroSection() {
             </motion.div>
           )}
           {!isTypewriterDone && (
-            <div className="pt-8 h-[50px] opacity-0" aria-hidden="true" />
+            <div className="pt-8 h-[50px] opacity-0" />
           )}
         </AnimatePresence>
+
       </div>
     </section>
   );
