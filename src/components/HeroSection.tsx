@@ -168,7 +168,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="mt-6 text-base sm:text-lg text-fill-color/70 max-w-xl mx-auto font-normal"
+                className="sm:mt-6 -mt-2 text-base sm:text-lg text-fill-color/70 max-w-xl mx-auto font-normal"
               >
                 Explore curated{' '}
                 <span className="text-blue-400 font-medium">trading groups</span>,{' '}
