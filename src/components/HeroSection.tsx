@@ -17,13 +17,14 @@ const LANGUAGES = [
 ];
 
 export default function HeroSection() {
+  const [pageLoaded, setPageLoaded] = useState(false);
   const [firstLineDone, setFirstLineDone] = useState(false);
   const [secondLineDone, setSecondLineDone] = useState(false);
   const [isTypewriterDone, setIsTypewriterDone] = useState(false);
   const [badgeText, setBadgeText] = useState(LANGUAGES[0]);
 
   const firstSequence = useMemo(() => [
-    "Discover Trusted ",
+    "Discover Trusted",
     () => setFirstLineDone(true),
   ], []);
 
@@ -31,6 +32,16 @@ export default function HeroSection() {
     "Crypto Communities",
     () => setSecondLineDone(true),
   ], []);
+
+  useEffect(() => {
+    if (document.readyState === 'complete') {
+      setPageLoaded(true);
+    } else {
+      const handleLoad = () => setPageLoaded(true);
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
+  }, []);
 
   useEffect(() => {
     if (!isTypewriterDone) return;
@@ -135,18 +146,20 @@ export default function HeroSection() {
 
             {/* LINE 1 */}
             <span className="inline-block relative">
-              <TypeAnimation
-                sequence={firstSequence}
-                speed={25}
-                cursor={false}
-                wrapper="span"
-                className="inline-block"
-              />
+              {pageLoaded && (
+                <TypeAnimation
+                  sequence={firstSequence}
+                  speed={25}
+                  cursor={false}
+                  wrapper="span"
+                  className="inline"
+                />
+              )}
               {!firstLineDone && (
                 <motion.span
                   animate={{ opacity: [1, 0, 1] }}
                   transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
-                  className="inline-block w-[3px] sm:w-[4px] h-[0.85em] bg-gradient-to-b from-blue-300 to-blue-400 ml-1 sm:ml-2 align-baseline"
+                  className="inline-block w-[3px] sm:w-[4px] h-[0.85em] bg-gradient-to-b from-blue-300 to-blue-400 ml-2 align-baseline"
                 />
               )}
             </span>
@@ -166,13 +179,13 @@ export default function HeroSection() {
                     speed={25}
                     cursor={false}
                     wrapper="span"
-                    className="inline-block"
+                    className="inline"
                   />
                   {!secondLineDone && (
                     <motion.span
                       animate={{ opacity: [1, 0, 1] }}
                       transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
-                      className="inline-block w-[3px] sm:w-[4px] h-[0.85em] bg-gradient-to-b from-blue-300 to-blue-400 ml-1 sm:ml-2 align-baseline"
+                      className="inline-block w-[3px] sm:w-[4px] h-[0.85em] bg-gradient-to-b from-blue-300 to-blue-400 ml-2 align-baseline"
                     />
                   )}
                 </>
