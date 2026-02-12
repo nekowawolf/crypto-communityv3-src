@@ -2,6 +2,7 @@
 
 import { FaCode, FaChartLine, FaParachuteBox, FaArrowRight } from 'react-icons/fa6';
 import { RiNftFill } from "react-icons/ri";
+import { FadeIn } from "./ui/fade-in";
 
 const categories = [
     {
@@ -30,18 +31,23 @@ export default function CategoryGrid() {
     return (
         <section id="categories" className="py-20 px-6 max-w-7xl mx-auto">
             <div className="text-center mb-12">
-                <h2 className="text-3xl sm:text-5xl font-extrabold text-fill-color mb-4">
-                    Explore Communities
-                </h2>
-                <p className="text-base sm:text-lg text-fill-color/60 max-w-2xl mx-auto">
-                    Join the most active groups in the crypto space.
-                </p>
+                <FadeIn>
+                    <h2 className="text-3xl sm:text-5xl font-extrabold text-fill-color mb-4">
+                        Explore Communities
+                    </h2>
+                </FadeIn>
+                <FadeIn delay={0.2}>
+                    <p className="text-base sm:text-lg text-fill-color/60 max-w-2xl mx-auto">
+                        Join the most active groups in the crypto space.
+                    </p>
+                </FadeIn>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                 {categories.map((cat, idx) => (
-                    <div
+                    <FadeIn
                         key={idx}
+                        delay={0.1 * idx}
                         className="group relative cursor-pointer overflow-hidden rounded-2xl p-7 border border-[rgba(var(--fill-color-rgb),0.05)] bg-gradient-to-br from-blue-500/10 to-cyan-500/5 backdrop-blur-sm hover:scale-[1.02] transition-all duration-300 shadow-xl"
                     >
                         {/* Content */}
@@ -68,7 +74,7 @@ export default function CategoryGrid() {
                         <div className="absolute -bottom-6 -right-6 text-8xl text-fill-color opacity-[0.03] transform rotate-12 pointer-events-none transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
                             <cat.icon />
                         </div>
-                    </div>
+                    </FadeIn>
                 ))}
             </div>
         </section>
