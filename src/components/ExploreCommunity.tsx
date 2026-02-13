@@ -16,14 +16,14 @@ const ExploreCommunity = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center flex flex-col items-center px-4 max-w-4xl mx-auto pt-10">
-        <FadeIn>
+        <FadeIn viewport={{ once: true, margin: "-100px" }}>
           <h2 className="text-3xl sm:text-4xl md:text-7xl font-extrabold text-fill-color tracking-tight leading-tight mb-20">
             Build and connect with <br />
             <span className="text-blue-400">crypto communities</span>
           </h2>
         </FadeIn>
 
-        <FadeIn delay={0.2} className="relative">
+        <FadeIn delay={0.2} className="relative" viewport={{ once: true, margin: "-100px" }}>
           <Link
             href="/community"
             className="group relative inline-flex items-center gap-2 

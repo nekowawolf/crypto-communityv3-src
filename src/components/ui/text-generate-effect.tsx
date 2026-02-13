@@ -35,7 +35,7 @@ export const TextGenerateEffect = ({
         "span",
         {
           opacity: 1,
-          filter: filter ? "blur(0px)" : "none",
+          transform: "translateY(0px)",
         },
         {
           duration: duration ? duration : 1,
@@ -59,7 +59,7 @@ export const TextGenerateEffect = ({
             key={word + idx}
             className="opacity-0 inline-block"
             style={{
-              filter: filter ? "blur(8px)" : "none",
+              willChange: "opacity, transform",
               transform: "translateY(10px)",
             }}
           >
