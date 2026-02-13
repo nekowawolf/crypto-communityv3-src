@@ -7,7 +7,7 @@ const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World)
   ssr: false,
 });
 
-import { TextGenerateEffect } from "./ui/text-generate-effect";
+import BlurText from "./ui/Blur-text";
 
 import { useState, useMemo } from "react";
 
@@ -414,17 +414,17 @@ export function GlobeDemo() {
         <div className="space-y-6 sm:space-y-8 order-1 md:order-1">
           <div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-fill-color leading-tight">
-              <TextGenerateEffect
-                words="A Global Crypto Community"
-                staggerDuration={0.2}
-                onComplete={() => setTitle1Complete(true)}
+              <BlurText
+                text="A Global Crypto Community"
+                delay={150}
+                onAnimationComplete={() => setTitle1Complete(true)}
               />
               <span className="text-blue-400">
-                <TextGenerateEffect
-                  words="Without Limits"
+                <BlurText
+                  text="Without Limits"
+                  delay={150}
                   start={title1Complete}
-                  staggerDuration={0.2}
-                  onComplete={() => setTitle2Complete(true)}
+                  onAnimationComplete={() => setTitle2Complete(true)}
                 />
               </span>
             </h2>

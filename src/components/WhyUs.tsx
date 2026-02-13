@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { FaShieldHalved, FaBolt } from 'react-icons/fa6';
-import { TextGenerateEffect } from "./ui/text-generate-effect";
+import BlurText from "./ui/Blur-text";
 import { motion } from "motion/react";
 
 export default function WhyUs() {
@@ -20,17 +20,17 @@ export default function WhyUs() {
 
                     {/* TITLE */}
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-fill-color leading-tight">
-                        <TextGenerateEffect
-                            words="Curated Quality"
-                            staggerDuration={0.2}
-                            onComplete={() => setTitle1Complete(true)}
+                        <BlurText
+                            text="Curated Quality"
+                            delay={150}
+                            onAnimationComplete={() => setTitle1Complete(true)}
                         />
                         <span className="text-blue-400">
-                            <TextGenerateEffect
-                                words="Zero Scam Links"
+                            <BlurText
+                                text="Zero Scam Links"
+                                delay={150}
                                 start={title1Complete}
-                                staggerDuration={0.2}
-                                onComplete={() => setTitle2Complete(true)}
+                                onAnimationComplete={() => setTitle2Complete(true)}
                             />
                         </span>
                     </h2>
